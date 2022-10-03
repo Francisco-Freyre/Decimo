@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.CalificacionFinal"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*" BackgroundColor="White">
+
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1"
+                         Margin="10,5">
+
+                <Frame Padding="10"
+                       Margin="5"
+                       BackgroundColor="White">
+                    <ScrollView>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                                <RowDefinition Height="auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <!--SECCION IMAGEN, NOMBRE, DETALLES-->
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                
+                                <!--IMAGEN, NOMBRE Y CALIFICACIÓN-->
+                                <Grid Grid.Row="0"
+                                  ColumnDefinitions="80,*">
+
+                                    <Image x:Name="imgVino"
+                                           Aspect="AspectFit"
+                                           Grid.Column="0"></Image>
+
+                                    <Grid ColumnDefinitions="*,70"
+                                          Grid.Column="1">
+                                        
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        
+                                        <Label x:Name="lblNombreVino"
+                                               TextColor="#a22c59"
+                                               Grid.Column="0"
+                                               Grid.Row="0"></Label>
+
+                                        <Label x:Name="lblCalificacionFinal"
+                                               FontSize="20"
+                                               Grid.Column="1"
+                                               Grid.Row="0"
+                                               FontFamily="bold"
+                                               TextColor="Black"></Label>
+
+                                        <Label Text="Uvas:"
+                                               TextColor="#a22c59"
+                                               Grid.Column="0"
+                                               Grid.Row="1"></Label>
+
+                                        <StackLayout Grid.ColumnSpan="2"
+                                                     Grid.Row="2"
+                                                     VerticalOptions="Start"
+                                                     x:Name="stackUvas">
+                                        </StackLayout>
+
+                                    </Grid>
+                                    
+                                </Grid>
+                                
+                                <!--VINO Y COSECHA-->
+                                <Grid Grid.Row="1" 
+                                  ColumnDefinitions="*,*,*,*">
+                                    <Label Text="País:" 
+                                   Grid.Column="0"
+                                   Grid.Row="0"
+                                           TextColor="Black"></Label>
+                                    <Label x:Name="lblPais"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Región:" 
+                                   Grid.Column="2"
+                                   Grid.Row="0"
+                                           TextColor="Black"></Label>
+                                    <Label x:Name="lblRegion"
+                                   Grid.Column="3"
+                                   Grid.Row="0"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Productor:" 
+                                   Grid.Column="0"
+                                   Grid.Row="1"
+                                           TextColor="Black"></Label>
+                                    <Label x:Name="lblProductor"
+                                   Grid.Column="1"
+                                   Grid.Row="1"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Cosecha:" 
+                                   Grid.Column="2"
+                                   Grid.Row="1"
+                                           TextColor="Black"></Label>
+                                    <Label x:Name="lblCosecha"
+                                   Grid.Column="3"
+                                   Grid.Row="1"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Alcohol:" 
+                                   Grid.Column="0"
+                                   Grid.Row="2"
+                                           TextColor="Black"></Label>
+                                    <Label x:Name="lblAlcoholR"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                           TextColor="Black"></Label>
+
+
+                                </Grid>
+
+                            </Grid>
+
+                            <!-- RESUMEN Y SELECCIÓN APRECIACIÓN-->
+                            <Grid RowDefinitions="22,*"  
+                            Grid.Row="1">
+
+                                <Label Text="Resumen"
+                                   HorizontalOptions="Center"
+                                   TextColor="#a22c59"
+                                   FontSize="20"
+                                   Grid.Row="0"></Label>
+
+                                <Grid ColumnDefinitions="*,*"
+                                  RowDefinitions="*,*"
+                                  Grid.Row="1">
+
+                                    <Frame Padding="0" 
+                                       Margin="0"
+                                       Grid.Column="0"
+                                       Grid.Row="0"
+                                           BackgroundColor="White">
+                                        <Grid ColumnDefinitions="*,60">
+                                            <Label Text="Apreciación visual"
+                                               Grid.Column="0"
+                                                   TextColor="Black"></Label>
+                                            <Button Text="Ver" 
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                Grid.Column="1"
+                                                Clicked="Button_visual"></Button>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Frame Padding="0" 
+                                       Margin="0"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                           BackgroundColor="White">
+                                        <Grid ColumnDefinitions="*,60">
+                                            <Label Text="Apreciación aromática"
+                                               Grid.Column="0"
+                                                   TextColor="Black"></Label>
+                                            <Button Text="Ver" 
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                Grid.Column="1"
+                                                Clicked="Button_aromatica"></Button>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Frame Padding="0" 
+                                       Margin="0" 
+                                       Grid.Column="0"
+                                       Grid.Row="1"
+                                           BackgroundColor="White">
+                                        <Grid ColumnDefinitions="*,60">
+                                            <Label Text="Apreciación paladar"
+                                               Grid.Column="0"
+                                                   TextColor="Black"></Label>
+                                            <Button Text="Ver" 
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                Grid.Column="1"
+                                                Clicked="Button_gustativo"></Button>
+                                        </Grid>
+                                    </Frame>
+
+                                    <Frame Padding="0" 
+                                       Margin="0" 
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                           BackgroundColor="White">
+                                        <Grid ColumnDefinitions="*,60">
+                                            <Label Text="Apreciación personal"
+                                               Grid.Column="0"
+                                                   TextColor="Black"></Label>
+                                            <Button Text="Ver" 
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                Grid.Column="1"
+                                                Clicked="Button_personal"></Button>
+                                        </Grid>
+                                    </Frame>
+
+                                </Grid>
+
+                            </Grid>
+
+                            <!---GRID VISUAL-->
+                            <Grid ColumnDefinitions="75,*" 
+                                RowDefinitions="30,20,20,20,20,40" 
+                                HorizontalOptions="Center"
+                                x:Name="visual"
+                                IsVisible="false"
+                                Grid.Row="2">
+
+                                <Image Source="visual.png"
+                    Aspect="AspectFill"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                                ></Image>
+
+                                <Label Text="Visual"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Capa:"
+                    TextColor="#a22c59"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                                       ></Label>
+
+                                <Label x:Name="lblCapa"
+                                       TextTransform="Uppercase"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Color:"
+                    TextColor="#a22c59"
+                    Grid.Column="0"
+                    Grid.Row="2"></Label>
+
+                                <Label x:Name="lblColor"
+                                       TextTransform="Uppercase"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Brillo"
+                    TextColor="#a22c59"
+                    Grid.Column="0"
+                    Grid.Row="3"></Label>
+
+                                <Label x:Name="lblBrillo"
+                                       TextTransform="Uppercase"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Viscocidad:"
+                    TextColor="#a22c59"
+                    Grid.Column="0"
+                    Grid.Row="4"></Label>
+
+                                <Label x:Name="lblVisco"
+                                       TextTransform="Uppercase"
+                    Grid.Column="1"
+                    Grid.Row="4"
+                                       TextColor="Black"></Label>
+
+                                <!-- CALIFICACIÓN VISUAL-->
+                                <Grid ColumnDefinitions="89,40"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="5"
+                    Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Calificación:"
+                    BackgroundColor="#a22c59"
+                    Padding="5"
+                    TextColor="#ffff"
+                    Grid.Column="0"></Label>
+                                    <Label x:Name="lblVCalificacion"
+                    TextColor="#111"
+                    FontSize="22"
+                    Grid.Column="1"></Label>
+                                </Grid>
+
+                            </Grid>
+
+                            <!--GRID GUSTATIVO-->
+                            <ScrollView x:Name="gustativo"
+                                    Grid.Row="2"
+                                    IsVisible="false" >
+                                <Grid ColumnDefinitions="90,*" 
+                                    RowDefinitions="30,20,20,20,20,20,30" 
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center">
+
+                                    <Image Source="gustativo.png"
+                                       Aspect="AspectFill"
+                                       Grid.Column="0"
+                                       Grid.Row="0"></Image>
+
+                                    <Label Text="Gustativo" 
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Dulce:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="1"></Label>
+
+                                    <Label x:Name="lblDulce" 
+                                           TextTransform="Uppercase"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Acidez:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="2"></Label>
+
+                                    <Label x:Name="lblAcidez"
+                                           TextTransform="Uppercase"
+                                       Grid.Column="1"
+                                       Grid.Row="2"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Tanino:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="3"></Label>
+
+                                    <Label x:Name="lblTanino"
+                                           TextTransform="Uppercase"
+                                       Grid.Column="1"
+                                       Grid.Row="3"
+                                           TextColor="Black"></Label>
+                                    <Label Text="Alcohol:"
+                                        TextColor="#a22c59"
+                                        Grid.Column="0"
+                                        Grid.Row="4"></Label>
+
+                                    <Label x:Name="lblAlcohol"
+                                           TextTransform="Uppercase"
+                                        Grid.Column="1"
+                                        Grid.Row="4"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Cuerpo:"
+                                        TextColor="#a22c59"
+                                        Grid.Column="0"
+                                        Grid.Row="5"></Label>
+
+                                    <Label x:Name="lblCuerpo"
+                                           TextTransform="Uppercase"
+                                        Grid.Column="1"
+                                        Grid.Row="5"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Permanencia:"
+                                        TextColor="#a22c59"
+                                        Grid.Column="0"
+                                        Grid.Row="6"></Label>
+
+                                    <Label x:Name="lblPermanencia"
+                                           TextTransform="Uppercase"
+                                        Grid.Column="1"
+                                        Grid.Row="6"
+                                           TextColor="Black"></Label>
+
+                                    <!-- CALIFICACIÓN GUSTATIVO -->
+                                    <Grid ColumnDefinitions="89,40"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Grid.Row="7"
+                                        Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="Calificación:"
+                                            BackgroundColor="#a22c59"
+                                            Padding="5"
+                                            TextColor="#ffff"
+                                            Grid.Column="0"></Label>
+                                        <Label x:Name="lblGCalificacion"
+                                            TextColor="Black"
+                                            FontSize="22"
+                                            Grid.Column="1"></Label>
+                                    </Grid>
+
+                                </Grid>
+                            </ScrollView>
+
+                            <!--GRID AROMATICA-->
+                            <ScrollView x:Name="aromatica"
+                                    Grid.Row="2"
+                                    IsVisible="false">
+                                <Grid ColumnDefinitions="83,*" 
+                                RowDefinitions="40,20,20,Auto,40" 
+                                HorizontalOptions="Center">
+
+                                    <Image Source="aromatica.png"
+                                       Aspect="AspectFill"
+                                       Grid.Column="0"
+                                       Grid.Row="0"></Image>
+
+                                    <Label Text="Aromatica"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Intensidad:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="1"></Label>
+
+                                    <Label x:Name="lblIntensidad"
+                                           TextTransform="Uppercase"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Complejidad:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="2"></Label>
+
+                                    <Label x:Name="lblComplejidad"
+                                           TextTransform="Uppercase"
+                                       Grid.Column="1"
+                                       Grid.Row="2"
+                                           TextColor="Black"></Label>
+
+                                    <Label Text="Aromas:"
+                                       TextColor="#a22c59"
+                                       Grid.Column="0"
+                                       Grid.Row="3"></Label>
+                                    <StackLayout Grid.Column="1"
+                                                 Grid.Row="3"
+                                                 VerticalOptions="Start"
+                                                 x:Name="stackAromas">
+                                    </StackLayout>
+
+                                    <!-- CALIFICACIÓN AROMATICA -->
+                                    <Grid ColumnDefinitions="89,40"
+                                      VerticalOptions="CenterAndExpand"
+                                      HorizontalOptions="CenterAndExpand"
+                                      Grid.Row="4"
+                                      Grid.Column="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="30"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="Calificación:"
+                                           BackgroundColor="#a22c59"
+                                           Padding="5"
+                                           TextColor="#ffff"
+                                           Grid.Column="0"></Label>
+                                        <Label x:Name="lblACalificacion"
+                                           TextColor="Black"
+                                           FontSize="22"
+                                           Grid.Column="1"></Label>
+                                    </Grid>
+                                </Grid>
+                            </ScrollView>
+
+                            <!--GRID APRECAICIÓN PERSONAL-->
+                            <Grid ColumnDefinitions="85,*" 
+                                RowDefinitions="40,*" 
+                                HorizontalOptions="Center"
+                                x:Name="personal"
+                                Grid.Row="2"
+                                IsVisible="false">
+
+                                <Image Source="usuario2.png"
+                                    Aspect="AspectFill"
+                                    Grid.Column="0"
+                                    Grid.Row="0"></Image>
+
+                                <Label Text="Personal"
+                                   HorizontalOptions="CenterAndExpand"
+                                   VerticalOptions="CenterAndExpand"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Comentarios:"
+                                   TextColor="#a22c59"
+                                   Grid.Column="0"
+                                   Grid.Row="1"></Label>
+
+                                <Label x:Name="lblComentario"
+                                   Grid.Column="1"
+                                   Grid.Row="1"
+                                       TextColor="Black"></Label>
+
+                                <Label Text="Maridaje:"
+                                   TextColor="#a22c59"
+                                   Grid.Column="0"
+                                   Grid.Row="2"></Label>
+
+                                <Label x:Name="lblMaridaje"
+                                   Grid.Column="1"
+                                   Grid.Row="2"
+                                       TextColor="Black"></Label>
+
+                                <!-- CALIFICACIÓN -->
+                                <Grid ColumnDefinitions="89,40"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Grid.Row="3"
+                                    Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Calificación:"
+                                        BackgroundColor="#a22c59"
+                                        Padding="5"
+                                        TextColor="#ffff"
+                                        Grid.Column="0"></Label>
+                                    <Label x:Name="lblPCalificacion"
+                                        TextColor="Black"
+                                        FontSize="22"
+                                        Grid.Column="1"></Label>
+                                </Grid>
+
+                            </Grid>
+
+                        </Grid>
+                        
+                    </ScrollView>
+                </Frame>
+
+                <!-- BOTONES FINAL -->
+                <Grid ColumnDefinitions="*,*,*,*">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Button Text="Hecho"
+                            BackgroundColor="#a22c59"
+                            TextColor="#ffff"
+                            FontSize="10"
+                            CornerRadius="5"
+                            Grid.Column="3"
+                            x:Name="btnHecho"
+                            Clicked="btnHecho_Clicked"></Button>
+
+                </Grid>
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

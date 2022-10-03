@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             BackgroundColor="AliceBlue"
+             x:Class="vinoCal.views.Amigos">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*,60">
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Label Text="Amigos"
+                           TextColor="#000"
+                           FontSize="20"
+                           Grid.Row="0"></Label>
+
+                <SearchBar x:Name="searchAmigo"
+                           Placeholder="Buscar amigo"
+                           FontSize="14"
+                           Grid.Row="1"
+                           Margin="5"></SearchBar>
+
+                <ScrollView Grid.Row="2">
+
+                    <StackLayout>
+
+                        <Frame Padding="5"
+                               Margin="0">
+
+                            <Grid ColumnDefinitions="80,*" 
+                                  RowDefinitions="*,*,10">
+                                <Image Source="usuario.png" 
+                               Grid.Column="0"
+                               Grid.RowSpan="3"></Image>
+
+                                <Label Text="Durango Grill"
+                               TextColor="#a22c59"
+                               FontAttributes="Bold"
+                               Grid.Column="1"
+                               Grid.Row="0"></Label>
+
+                                <Label Text="10 vinos en común"
+                               Grid.Column="1"
+                               Grid.Row="1"></Label>
+
+                            </Grid>
+                        </Frame>
+
+                        <Frame Padding="5"
+                               Margin="0">
+
+                            <Grid ColumnDefinitions="80,*" 
+                                  RowDefinitions="*,*,10">
+                                <Image Source="usuario.png" 
+                               Grid.Column="0"
+                               Grid.RowSpan="3"></Image>
+
+                                <Label Text="Juan Perez"
+                               TextColor="#a22c59"
+                               FontAttributes="Bold"
+                               Grid.Column="1"
+                               Grid.Row="0"></Label>
+
+                                <Label Text="0 vinos en común"
+                               Grid.Column="1"
+                               Grid.Row="1"></Label>
+
+                            </Grid>
+                        </Frame>
+
+                        <Frame Padding="5"
+                               Margin="0">
+
+                            <Grid ColumnDefinitions="80,*" 
+                                  RowDefinitions="*,*,10">
+                                <Image Source="usuario.png" 
+                               Grid.Column="0"
+                               Grid.RowSpan="3"></Image>
+
+                                <Label Text="Durango Grill"
+                               TextColor="#a22c59"
+                               FontAttributes="Bold"
+                               Grid.Column="1"
+                               Grid.Row="0"></Label>
+
+                                <Label Text="10 vinos en común"
+                               Grid.Column="1"
+                               Grid.Row="1"></Label>
+
+                            </Grid>
+                        </Frame>
+
+
+                        <Frame Padding="5"
+                               Margin="0">
+
+                            <Grid ColumnDefinitions="80,*" 
+                                  RowDefinitions="*,*,10">
+                                <Image Source="usuario.png" 
+                               Grid.Column="0"
+                               Grid.RowSpan="3"></Image>
+
+                                <Label Text="Oscar Ramirez"
+                               TextColor="#a22c59"
+                               FontAttributes="Bold"
+                               Grid.Column="1"
+                               Grid.Row="0"></Label>
+
+                                <Label Text="5 vinos en común"
+                               Grid.Column="1"
+                               Grid.Row="1"></Label>
+
+                            </Grid>
+                        </Frame>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </Grid>
+
+            <custom:footer Grid.Row="2"></custom:footer>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

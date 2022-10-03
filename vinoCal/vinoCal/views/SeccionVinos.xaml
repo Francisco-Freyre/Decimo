@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.SeccionVinos"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*" BackgroundColor="White">
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1">
+
+                <Label Text="Catar vinos"
+                       FontSize="Title"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       TextColor="Black"/>
+
+                <Grid ColumnDefinitions="*,90"
+                      Margin="10,5" BackgroundColor="White">
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <SearchBar x:Name="searchVino"
+                               Placeholder="Ingresa el nombre del vino"
+                               TextChanged="searchVino_TextChanged"
+                               FontSize="14"
+                               Grid.Column="0"
+                               BackgroundColor="White"
+                               TextColor="Black"
+                               PlaceholderColor="Black"></SearchBar>
+
+                    <!--<Button Text="Agregar nuevo vino"
+                            Clicked="Button_addVino"
+                            HorizontalOptions="Center"
+                            BackgroundColor="#a22c59"
+                            FontSize="8"
+                            CornerRadius="10"
+                            TextColor="#ffff"
+                            Grid.Column="1">
+
+                    </Button>-->
+
+                </Grid>
+
+                <ScrollView BackgroundColor="White">
+                    <StackLayout BackgroundColor="White">
+
+                        <ListView x:Name="listaVinos" HasUnevenRows="True" ItemSelected="listaVinos_ItemSelected"
+                                  BackgroundColor="White">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                        <Frame Margin="10,2"
+                                               Padding="5,10"
+                                               BackgroundColor="White">
+                                            <Grid ColumnDefinitions="80,*">
+                                                <!-- RowDefinitions="*,30" --> 
+
+                                                <Image Source="{Binding img}"
+                                                       Aspect="AspectFill"
+                                                       Grid.Column="0"
+                                                       Grid.Row="0">
+                                                </Image>
+
+                                                <Grid RowDefinitions="35,*" 
+                                                      Grid.Column="1"
+                                                      Grid.Row="0">
+                                                    <Label Text="{Binding id}" IsVisible="false"></Label>
+                                                    <Label Text="{Binding nombre}"
+                                                           TextColor="#a22c59"
+                                                           Grid.Row="0"
+                                                           ></Label>
+
+                                                    <Grid RowDefinitions="20,*,*,*"
+                                                          ColumnDefinitions="69,*"
+                                                          Grid.Row="1">
+
+                                                        <Label Text="País:"
+                                                               Grid.Column="0"
+                                                               Grid.Row="0"
+                                                               TextColor="Black"></Label>
+
+                                                        <Label Text="{Binding pais}"
+                                                               Grid.Column="1"
+                                                               Grid.Row="0"
+                                                               TextColor="Black"></Label>
+
+                                                        <Label Text="Región:"
+                                                               Grid.Column="0"
+                                                               Grid.Row="1"
+                                                               TextColor="Black"></Label>
+
+                                                        <Label Text="{Binding region}"
+                                                               Grid.Column="1"
+                                                               Grid.Row="1"
+                                                               TextColor="Black"></Label>
+
+                                                        <Label Text="Productor:"
+                                                               Grid.Column="0"
+                                                               Grid.Row="2"
+                                                               TextColor="Black"></Label>
+
+                                                        <Label Text="{Binding productor}"
+                                                               Grid.Column="1"
+                                                               Grid.Row="2"
+                                                               TextColor="Black"></Label>
+
+                                                    </Grid>
+
+                                                </Grid>
+                                            </Grid>
+                                        </Frame>
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
+                </ScrollView>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

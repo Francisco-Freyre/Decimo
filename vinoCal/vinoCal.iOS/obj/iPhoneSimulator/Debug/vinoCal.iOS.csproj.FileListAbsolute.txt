@@ -1,0 +1,125 @@
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/vinoCal.iOS.exe
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/vinoCal.iOS.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Lottie.iOS.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Lottie.iOS.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Lottie.Forms.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Lottie.Forms.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Rg.Plugins.Popup.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/WebP.Touch.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Platform.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Platform.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Forms.Platform.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Forms.Platform.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Forms.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Forms.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/pt-BR/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/XF.Material.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/XF.Material.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/vinoCal.dll
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/bin/iPhoneSimulator/Debug/vinoCal.pdb
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_PartialAppManifest.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_BundleResourceWithLogicalName.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/actool/_ProcessedImageAssetsPath.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/ibtool/_BundleResourceWithLogicalName.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/ibtool/_ProcessedInterfaceDefinitionsPath.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/coremlc/_PartialAppManifest.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/coremlc/_BundleResourceWithLogicalName.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/coremlc/_ProcessedCoreMLModelsPath.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/_ProcessedBundleResourcesPath.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/_ProcessedContentPath.items
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/alto.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/aromatica.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/bajo.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/botellas.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/brilloa.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/brillob.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/brillom.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/brilloma.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/califFinal.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/caracteristicas.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/catarVino.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/catas.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/cerrar.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/copaBlanco.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/copaEspumoso.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/copaRosado.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/copaTinto.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/desaborido.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/estrella.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/fina.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/fondo_index.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/gustativo.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/hamburguesa.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/home.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/iconwine.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/inicio.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/logo_index.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/mcatas.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/media.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/medio.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/medio_alto.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/notificaciones.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/ondulada.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/user.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/usuario.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/usuario2.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/usuarios.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/vino.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/viscocidada.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/viscocidadm.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/viscocidadma.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/visual.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/wine.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/wine2.png
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/device-builds/ipod touch (7th generation)-15.4/optimized/
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/vinoCal.iOS.csproj.AssemblyReference.cache
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/vinoCal.iOS.csproj.CoreCompileInputs.cache
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/vinoCal.iOS.csproj.CopyComplete
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/vinoCal.iOS.exe
+/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhoneSimulator/Debug/vinoCal.iOS.pdb

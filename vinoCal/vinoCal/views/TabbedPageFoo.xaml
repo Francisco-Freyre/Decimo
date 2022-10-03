@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:custom="clr-namespace:vinoCal.views.customViews"
+            xmlns:local="clr-namespace:vinoCal.views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            x:Class="vinoCal.views.TabbedPageFoo"
+            BarBackgroundColor="#a22c59"
+            SelectedTabColor="#FFFFFF"
+            UnselectedTabColor="#FFFFFF"
+            BackgroundColor="White">
+  <!--Pages can be added as references or inline-->
+    <!--<local:IndexPage IconImageSource="home.png" Title="Inicio"></local:IndexPage>-->
+    <local:vinosCal IconImageSource="iconwine.png" Title="Catas"></local:vinosCal>
+    <!--<local:perfiles IconImageSource="user.png" Title="Usuarios"></local:perfiles>-->
+</TabbedPage>

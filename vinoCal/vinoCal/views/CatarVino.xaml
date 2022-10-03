@@ -1,0 +1,1809 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews" 
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
+             x:Class="vinoCal.views.CatarVino"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*" BackgroundColor="White">
+
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1"
+                         Margin="10,5"
+                         BackgroundColor="White">
+
+                <ScrollView
+                    BackgroundColor="White">
+
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <!-- FRAME VISUAL -->
+
+                        <Frame Grid.Row="0"
+                               BackgroundColor="White">
+                            <Grid RowDefinitions="40,40,*,40">
+
+                                <!--DESCRIPCION-->
+                                <Grid ColumnDefinitions="80,*"
+                                      HorizontalOptions="Center"
+                                      Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="visual.png"
+                                           Aspect="AspectFill"
+                                           Margin="5,5,-30,-3"
+                                           Grid.Column="0"></Image>
+                                    <Label Text="Visual"
+                                           FontSize="24"
+                                           Margin="-5,5,5,5"
+                                           TextColor="#000"
+                                           Grid.Column="1"></Label>
+                                </Grid>
+
+                                <!--BOTONES-->
+                                <Grid ColumnDefinitions="*,*,*,90" 
+                                      Grid.Row="1"
+                                      BackgroundColor="#F2F2F2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button Text="Capa"
+                                            x:Name="btncapa"
+                                            Clicked="btncapa_Capa"
+                                            FontSize="10"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            Grid.Column="0"></Button>
+                                    <Button Text="Color"
+                                            x:Name="btncolor"
+                                            Clicked="btncolor_Color"
+                                            FontSize="10"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="1"></Button>
+                                    <Button Text="Brillo"
+                                            x:Name="btnbrillo"
+                                            Clicked="btnbrillo_Brillo"
+                                            FontSize="10"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="2"></Button>
+                                    <Button Text="Viscocidad"
+                                            x:Name="btnvisco"
+                                            Clicked="btnvisco_Visco"
+                                            FontSize="10"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="3"></Button>
+                                </Grid>
+
+                                <!--OPCION CAPA-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      Padding="0"
+                                      Margin="0"
+                                      Grid.Row="2"
+                                      x:Name="capavi">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"></RowDefinition>
+                                        <RowDefinition Height="20"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <ImageButton Source="bajo.png"
+                                                 Aspect="AspectFill"
+                                                 Grid.Column="0"
+                                                 Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnBajoCapa"
+                                                 Clicked="btnBajoCapa_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                                 Aspect="AspectFill"
+                                                 Grid.Column="1"
+                                                 Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioCapa"
+                                                 Clicked="btnMedioCapa_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioAltoCapa"
+                                                 Clicked="btnMedioAltoCapa_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnAltoCapa"
+                                                 Clicked="btnAltoCapa_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION COLOR-->
+                                <Grid Grid.Row="2" 
+                                      RowDefinitions="*,80"
+                                      x:Name="colorvi"
+                                      IsVisible="false">
+                                    
+                                    <!--COPAS-->
+                                    <Grid ColumnDefinitions="*,*,*,*"
+                                          RowDefinitions="90,20,20"
+                                          Grid.Row="0">
+
+                                        <ImageButton Source="copaTinto.png"
+                                                     Clicked="ImageButton_Tinto"
+                                                     BackgroundColor="Transparent"
+                                                     Aspect="AspectFill"
+                                                     Grid.Column="0"
+                                                     Grid.Row="0">
+                                        </ImageButton>
+                                        <CheckBox Grid.Column="0"
+                                                  Grid.Row="1"
+                                                  HorizontalOptions="Center"
+                                                  VerticalOptions="Center"
+                                                  x:Name="cktinto"
+                                                  IsEnabled="False"
+                                                  IsChecked="True">
+                                        </CheckBox>
+                                        <Label Text="Tinto"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Grid.Column="0"
+                                               Grid.Row="2"></Label>
+                                        
+                                        <ImageButton Source="copaRosado.png"
+                                                     Clicked="ImageButton_Rosado"
+                                                     BackgroundColor="Transparent"
+                                                     Aspect="AspectFill"
+                                                     Grid.Column="1"
+                                                     Grid.Row="0">
+                                        </ImageButton>
+                                        <CheckBox Grid.Column="1"
+                                                  Grid.Row="1"
+                                                  HorizontalOptions="Center"
+                                                  VerticalOptions="Center"
+                                                  x:Name="ckrosado"
+                                                  IsEnabled="False">
+                                        </CheckBox>
+                                        <Label Text="Rosado"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Grid.Column="1"
+                                               Grid.Row="2"></Label>
+
+                                        <ImageButton Source="copaBlanco.png"
+                                                     Clicked="ImageButton_Blanco"
+                                                     BackgroundColor="Transparent"
+                                                     Aspect="AspectFill"
+                                                     Grid.Column="2"
+                                                     Grid.Row="0">
+                                        </ImageButton>
+                                        <CheckBox Grid.Column="2"
+                                                  Grid.Row="1"
+                                                  HorizontalOptions="Center"
+                                                  VerticalOptions="Center"
+                                                  x:Name="ckblanco"
+                                                  IsEnabled="False">
+                                        </CheckBox>
+                                        <Label Text="Blanco"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Grid.Column="2"
+                                               Grid.Row="2"></Label>
+
+                                        <ImageButton Source="copaEspumoso.png"
+                                                     Clicked="ImageButton_Espumoso"
+                                                     BackgroundColor="Transparent"
+                                                     Aspect="AspectFill"
+                                                     Grid.Column="3"
+                                                     Grid.Row="0">
+                                        </ImageButton>
+                                        <CheckBox Grid.Column="3"
+                                                  Grid.Row="1"
+                                                  HorizontalOptions="Center"
+                                                  VerticalOptions="Center"
+                                                  x:Name="ckespumoso"
+                                                  IsEnabled="False">
+                                        </CheckBox>
+                                        <Label Text="Espumoso"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"
+                                               Grid.Column="3"
+                                               Grid.Row="2"></Label>
+
+                                    </Grid>
+                                    
+                                    <!--COLORES TINTO-->
+                                    <Frame CornerRadius="10"
+                                           Padding="0"
+                                           Margin="0"
+                                           Grid.Row="1"
+                                           x:Name="frametinto"
+                                           IsVisible="true">
+                                        <Grid ColumnDefinitions="90,*"
+                                              BackgroundColor="#a22c59">
+                                            <Label Text="TONALIDAD"
+                                                   TextColor="#fff"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Grid.Column="0"></Label>
+                                            <Grid BackgroundColor="#fff"
+                                                  Padding="5"
+                                                  ColumnDefinitions="40,40,40,40"
+                                                  RowDefinitions="40,20"
+                                                  Grid.Column="1">
+
+                                                <Button BackgroundColor="#9b121e"
+                                                        CornerRadius="20"
+                                                        Grid.Column="0"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnRubi"
+                                                        Clicked="btnRubi_Clicked"></Button>
+                                                <Label Text="Rubí"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       Grid.Column="0"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#4b21c3"
+                                                        CornerRadius="20"
+                                                        Grid.Column="1"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnViolaceo"
+                                                        Clicked="btnViolaceo_Clicked"></Button>
+                                                <Label Text="Violaceo"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#aa1b47"
+                                                        CornerRadius="20"
+                                                        Grid.Column="2"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnGranate"
+                                                        Clicked="btnGranate_Clicked"></Button>
+                                                <Label Text="Granate"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="2"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#d74514"
+                                                        CornerRadius="20"
+                                                        Grid.Column="3"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnAtejado"
+                                                        Clicked="btnAtejado_Clicked"></Button>
+                                                <Label Text="Atejado"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="3"
+                                                       Grid.Row="1"></Label>
+                                                
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+                                    <!--COLORES ROSADO-->
+                                    <Frame CornerRadius="10"
+                                           Padding="0"
+                                           Margin="0"
+                                           Grid.Row="1"
+                                           x:Name="framerosado"
+                                           IsVisible="false">
+                                        <Grid ColumnDefinitions="60,*"
+                                              BackgroundColor="#a22c59">
+                                            <Label Text="TONALIDAD"
+                                                   TextColor="#fff"
+                                                   FontSize="10"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Grid.Column="0"></Label>
+                                            <Grid BackgroundColor="#fff"
+                                                  Padding="5"
+                                                  ColumnDefinitions="40,40,40,40,40"
+                                                  RowDefinitions="40,25"
+                                                  Grid.Column="1">
+
+                                                <Button BackgroundColor="#e3baca"
+                                                        CornerRadius="20"
+                                                        Grid.Column="0"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnRosaPa"
+                                                        Clicked="btnRosaPa_Clicked"></Button>
+                                                <Label Text="Rosa Palido"
+                                                       FontSize="10"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       Grid.Column="0"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#ffc5db"
+                                                        CornerRadius="20"
+                                                        Grid.Column="1"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnRosaCl"
+                                                        Clicked="btnRosaCl_Clicked"></Button>
+                                                <Label Text="Rosa claro"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#ff494a"
+                                                        CornerRadius="20"
+                                                        Grid.Column="2"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnSalmon"
+                                                        Clicked="btnSalmon_Clicked"></Button>
+                                                <Label Text="Sálmon"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="2"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#ff5d81"
+                                                        CornerRadius="20"
+                                                        Grid.Column="3"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnGrossella"
+                                                        Clicked="btnGrossella_Clicked"></Button>
+                                                <Label Text="Grosella"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="3"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#f95e08"
+                                                        CornerRadius="20"
+                                                        Grid.Column="4"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnNaranja"
+                                                        Clicked="btnNaranja_Clicked"></Button>
+                                                <Label Text="Naranja"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="4"
+                                                       Grid.Row="1"></Label>
+
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+                                    <!--COLORES BLANCO-->
+                                    <Frame CornerRadius="10"
+                                           Padding="0"
+                                           Margin="0"
+                                           Grid.Row="1"
+                                           x:Name="frameblanco"
+                                           IsVisible="false">
+                                        <Grid ColumnDefinitions="60,*"
+                                              BackgroundColor="#a22c59">
+                                            <Label Text="TONALIDAD"
+                                                   TextColor="#fff"
+                                                   FontSize="10"
+                                                   HorizontalOptions="Center"
+                                                   VerticalOptions="Center"
+                                                   Grid.Column="0"></Label>
+                                            <Grid BackgroundColor="#fff"
+                                                  Padding="5"
+                                                  ColumnDefinitions="40,40,40,40,40"
+                                                  RowDefinitions="40,25"
+                                                  Grid.Column="1">
+
+                                                <Button BackgroundColor="#f4f0b8"
+                                                        CornerRadius="20"
+                                                        Grid.Column="0"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnAmarilloPa"
+                                                        Clicked="btnAmarilloPa_Clicked"></Button>
+                                                <Label Text="Amarillo Palido"
+                                                       FontSize="10"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       Grid.Column="0"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#e5fc5e"
+                                                        CornerRadius="20"
+                                                        Grid.Column="1"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnAmarilloVe"
+                                                        Clicked="btnAmarilloVe_Clicked"></Button>
+                                                <Label Text="Amarillo verdozo"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#ff9c00"
+                                                        CornerRadius="20"
+                                                        Grid.Column="2"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnDorado"
+                                                        Clicked="btnDorado_Clicked"></Button>
+                                                <Label Text="Dorado"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="2"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#e45909"
+                                                        CornerRadius="20"
+                                                        Grid.Column="3"
+                                                        Grid.Row="0"
+                                                        BorderColor="Blue"
+                                                        BorderWidth="0"
+                                                        x:Name="btnAmbar"
+                                                        Clicked="btnAmbar_Clicked"></Button>
+                                                <Label Text="Ambar"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="3"
+                                                       Grid.Row="1"></Label>
+
+                                                <Button BackgroundColor="#daa47a"
+                                                        CornerRadius="20"
+                                                        Grid.Column="4"
+                                                        Grid.Row="0"
+                                                        BorderColor="DarkOrange"
+                                                        BorderWidth="0"
+                                                        x:Name="btnCobre"
+                                                        Clicked="btnCobre_Clicked"></Button>
+                                                <Label Text="Cobre"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="4"
+                                                       Grid.Row="1"></Label>
+
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+                                    <!--COLORES ESPUMOSO-->
+                                    <Frame CornerRadius="10"
+                                           Padding="0"
+                                           Margin="0"
+                                           Grid.Row="1"
+                                           x:Name="frameespumoso"
+                                           IsVisible="false">
+                                        <Grid ColumnDefinitions="90,*"
+                                              BackgroundColor="#a22c59">
+                                            <Label Text="Tipo de burbuja"
+                                                   TextColor="#fff"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"
+                                                   Grid.Column="0"></Label>
+                                            <Grid BackgroundColor="#fff"
+                                                  Padding="5"
+                                                  ColumnDefinitions="*,*,*"
+                                                  RowDefinitions="40,20"
+                                                  Grid.Column="1">
+
+                                                <ImageButton  Source="fina.png"
+                                                        Aspect="AspectFill"
+                                                        Grid.Column="0"
+                                                        Grid.Row="0"
+                                                              BackgroundColor="Transparent"
+                                                              BorderColor="DarkOrange"
+                                                              BorderWidth="0"
+                                                              x:Name="btnFina"
+                                                              Clicked="btnFina_Clicked"></ImageButton>
+                                                <Label Text="Fina lineal"
+                                                       FontSize="10"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       Grid.Column="0"
+                                                       Grid.Row="1"></Label>
+                                                
+                                                <ImageButton  Source="media.png"
+                                                        Aspect="AspectFill"
+                                                        Grid.Column="1"
+                                                        Grid.Row="0"
+                                                              BackgroundColor="Transparent"
+                                                              BorderColor="DarkOrange"
+                                                              BorderWidth="0"
+                                                              x:Name="btnMediaEs"
+                                                              Clicked="btnMediaEs_Clicked"></ImageButton>
+                                                <Label Text="Media"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="10"
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"></Label>
+
+                                                <ImageButton  Source="ondulada.png"
+                                                        Aspect="AspectFill"
+                                                        Grid.Column="2"
+                                                        Grid.Row="0"
+                                                              BackgroundColor="Transparent"
+                                                              BorderColor="DarkOrange"
+                                                              BorderWidth="0"
+                                                              x:Name="btnondulada"
+                                                              Clicked="btnondulada_Clicked"></ImageButton>
+                                                <Label Text="Grande ondulada"
+                                                       HorizontalOptions="Center"
+                                                       VerticalOptions="Center"
+                                                       FontSize="8"
+                                                       Grid.Column="2"
+                                                       Grid.Row="1"></Label>
+
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+
+
+                                </Grid>
+
+                                <!--OPCION BRILLO-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="brillovi"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="brillob.png"
+                                           Aspect="AspectFill"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnBajoBr"
+                                                 Clicked="btnBajoBr_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="brillom.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioBr"
+                                                 Clicked="btnMedioBr_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="brilloma.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioAltoBr"
+                                                 Clicked="btnMedioAltoBr_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="brilloa.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnAltoBr"
+                                                 Clicked="btnAltoBr_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION VISCOCIDAD-->
+                                <Grid ColumnDefinitions="*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="viscovi"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="viscocidadm.png"
+                                           Aspect="AspectFill"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMediaVi"
+                                                 Clicked="btnMediaVi_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="viscocidadma.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMediaAltaVi"
+                                                 Clicked="btnMediaAltaVi_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="viscocidada.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnAltaVi"
+                                                 Clicked="btnAltaVi_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--PICKER VISUAL-->
+                                <Grid Grid.Row="3">
+                                    <Picker x:Name="pickerVisual"
+                                            Title="Calificación"
+                                            BackgroundColor="White"
+                                            TitleColor="Black"
+                                            SelectedIndexChanged="pickerVisual_SelectedIndexChanged">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>0</x:String>
+                                                <x:String>0.1</x:String>
+                                                <x:String>0.2</x:String>
+                                                <x:String>0.3</x:String>
+                                                <x:String>0.4</x:String>
+                                                <x:String>0.5</x:String>
+                                                <x:String>0.6</x:String>
+                                                <x:String>0.7</x:String>
+                                                <x:String>0.8</x:String>
+                                                <x:String>0.9</x:String>
+                                                <x:String>1</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </Grid>
+
+                            </Grid>
+                        </Frame>
+
+                        <!-- FRAME AROMATICA -->
+                        <Frame Grid.Row="1"
+                               BackgroundColor="White">
+                            <Grid RowDefinitions="40,40,*,40">
+
+                                <!--DESCRIPCION-->
+                                <Grid ColumnDefinitions="80,*"
+                                      HorizontalOptions="Center"
+                                      Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="aromatica.png"
+                                           Aspect="AspectFill"
+                                           Margin="5,5,-30,-3"
+                                           Grid.Column="0"></Image>
+                                    <Label Text="Aromática"
+                                           FontSize="24"
+                                           Margin="-5,5,5,5"
+                                           TextColor="#000"
+                                           Grid.Column="1"></Label>
+                                </Grid>
+
+                                <!--BOTONES-->
+                                <Grid ColumnDefinitions="*,*,*" 
+                                      Grid.Row="1"
+                                      BackgroundColor="#F2F2F2">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button Text="Intensidad"
+                                            x:Name="btnintensidad"
+                                            Clicked="btnintensidad_Intensidad"
+                                            FontSize="10"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            Grid.Column="0"></Button>
+                                    <Button Text="Complejidad"
+                                            x:Name="btncomplejidad"
+                                            Clicked="btncomplejidad_Complejidad"
+                                            FontSize="10"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="1"></Button>
+                                    <Button Text="Aroma"
+                                            x:Name="btnaroma"
+                                            Clicked="btnaroma_Aroma"
+                                            FontSize="10"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="2"></Button>
+                                </Grid>
+
+                                <!--OPCION INTENSIDAD-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="intensidadar">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnBajoIn"
+                                                 Clicked="btnBajoIn_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioIn"
+                                                 Clicked="btnMedioIn_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                                 Aspect="AspectFill"
+                                                 Grid.Column="2"
+                                                 Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMedioAltoIn"
+                                                 Clicked="btnMedioAltoIn_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnAltoIn"
+                                                 Clicked="btnAltoIn_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION COMPLEJIDAD-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="complejidadar"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnBajaCo"
+                                                 Clicked="btnBajaCo_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMediaCo"
+                                                 Clicked="btnMediaCo_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnMediaAltaCo"
+                                                 Clicked="btnMediaAltaCo_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="DarkOrange"
+                                                 BorderWidth="0"
+                                                 x:Name="btnAltaCo"
+                                                 Clicked="btnAltaCo_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION AROMA-->
+                                <Grid RowDefinitions="60,*"
+                                      Grid.Row="2"
+                                      x:Name="aromaar"
+                                      IsVisible="false">
+                                    <Frame CornerRadius="50"
+                                           Padding="2"
+                                           Margin="0"
+                                           Grid.Row="0">
+                                        <Entry x:Name="entryAroma" Completed="entryAroma_Completed"
+                                               BackgroundColor="White"
+                                               TextColor="Black"></Entry>
+                                    </Frame>
+                                    <StackLayout Grid.Row="1" 
+                                                 x:Name="stackAromas">
+                                        <Label TextColor="Black" Text="Aromas" FontSize="Large" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                    <!--
+                                    <Grid ColumnDefinitions="*,70"
+                                          Grid.Row="2">
+                                        <Button Text="Eliminar"
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                x:Name="btnEliminarAroma"
+                                                Clicked="btnEliminarAroma_Clicked"
+                                                FontSize="10"
+                                                CornerRadius="5"
+                                                Grid.Column="1"></Button>
+                                        <Button Text="Agregar"
+                                                BackgroundColor="#a22c59"
+                                                TextColor="#fff"
+                                                FontSize="10"
+                                                CornerRadius="5"
+                                                Grid.Column="2"
+                                                x:Name="btnAgregarAroma"
+                                                Clicked="btnAgregarAroma_Clicked"></Button>   
+                                    </Grid>
+                                    -->
+                                </Grid>
+                                
+                                <!--PICKER AROMATICA-->
+                                <Grid Grid.Row="3">
+                                    <Picker x:Name="pickerAromatica"
+                                            Title="Calificación"
+                                            BackgroundColor="White"
+                                            TitleColor="Black"
+                                            SelectedIndexChanged="pickerAromatica_SelectedIndexChanged">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>0</x:String>
+                                                <x:String>0.1</x:String>
+                                                <x:String>0.2</x:String>
+                                                <x:String>0.3</x:String>
+                                                <x:String>0.4</x:String>
+                                                <x:String>0.5</x:String>
+                                                <x:String>0.6</x:String>
+                                                <x:String>0.7</x:String>
+                                                <x:String>0.8</x:String>
+                                                <x:String>0.9</x:String>
+                                                <x:String>1</x:String>
+                                                <x:String>1.1</x:String>
+                                                <x:String>1.2</x:String>
+                                                <x:String>1.3</x:String>
+                                                <x:String>1.4</x:String>
+                                                <x:String>1.5</x:String>
+                                                <x:String>1.6</x:String>
+                                                <x:String>1.7</x:String>
+                                                <x:String>1.8</x:String>
+                                                <x:String>1.9</x:String>
+                                                <x:String>2</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </Grid>
+
+
+                            </Grid>
+                        </Frame>
+
+                        <!-- FRAME GUSTATIVO -->
+                        <Frame Grid.Row="2"
+                               Padding="2"
+                               BackgroundColor="White">
+                            <Grid RowDefinitions="40,90,*,40">
+
+                                <!--DESCRIPCION-->
+                                <Grid ColumnDefinitions="80,*"
+                                      HorizontalOptions="Center"
+                                      Grid.Row="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="gustativo.png"
+                                           Aspect="AspectFill"
+                                           Margin="5,5,-30,-3"
+                                           Grid.Column="0"></Image>
+                                    <Label Text="Gustativo"
+                                           FontSize="24"
+                                           Margin="-5,5,5,5"
+                                           TextColor="#000"
+                                           Grid.Column="1"></Label>
+                                </Grid>
+
+                                <!--BOTONES-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      BackgroundColor="#F2F2F2"
+                                      Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Button Text="Dulce"
+                                            x:Name="btndulce"
+                                            Clicked="btndulce_Clicked"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            Grid.Column="0"
+                                            Grid.Row="0"></Button>
+                                    <Button Text="Ácidez"
+                                            x:Name="btnacides"
+                                            Clicked="btnacides_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="1"
+                                            Grid.Row="0"></Button>
+                                    <Button Text="Tanino"
+                                            x:Name="btntanino"
+                                            Clicked="btntanino_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="2"
+                                            Grid.Row="0"></Button>
+                                    <Button Text="Sapidés"
+                                            x:Name="btnsapides"
+                                            Clicked="btnsapides_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="3"
+                                            Grid.Row="0"></Button>
+                                    <Button Text="Alcohol"
+                                            x:Name="btnalcohol"
+                                            FontSize="12"
+                                            FontAttributes="Bold"
+                                            Clicked="btnalcohol_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="0"
+                                            Grid.Row="1"></Button>
+                                    <Button Text="Cuerpo"
+                                            x:Name="btncuerpo"
+                                            Clicked="btncuerpo_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="1"
+                                            Grid.Row="1"></Button>
+                                    <Button Text="Permanencia"
+                                            x:Name="btnpermanencia"
+                                            FontSize="8"
+                                            FontAttributes="Bold"
+                                            Clicked="btnpermanencia_Clicked"
+                                            BackgroundColor="Transparent"
+                                            Grid.Column="2"
+                                            Grid.Row="1"></Button>
+                                </Grid>
+
+                                <!--OPCION DULCE-->
+                                <Grid ColumnDefinitions="*,*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      x:Name="dulcegu"
+                                      Grid.Row="2">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           x:Name="btnDSeco"
+                                           Clicked="btnDSeco_Clicked"></ImageButton>
+                                    <Label Text="Seco" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png"
+                                           BackgroundColor="Transparent"
+                                           Aspect="AspectFill"
+                                           Grid.Column="1"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Row="0"
+                                           x:Name="btnDSemiSeco"
+                                           Clicked="btnDSemiSeco_Clicked"></ImageButton>
+                                    <Label Text="Semi-seco" 
+                                           FontSize="12"
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png"
+                                           BackgroundColor="Transparent"
+                                           Aspect="AspectFill"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           x:Name="btnDSemiDulce"
+                                           Clicked="btnDSemiDulce_Clicked"></ImageButton>
+                                    <Label Text="Semi-dulce" 
+                                           FontSize="12"
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png"
+                                           BackgroundColor="Transparent"
+                                           Aspect="AspectFill"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           x:Name="btnDDulce"
+                                           Clicked="btnDDulce_Clicked"></ImageButton>
+                                    <Label Text="Dulce" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png"
+                                           BackgroundColor="Transparent"
+                                           Aspect="AspectFill"
+                                           Grid.Column="4"
+                                           Grid.Row="0"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           x:Name="btnDMuyDulce"
+                                           Clicked="btnDMuyDulce_Clicked"></ImageButton>
+                                    <Label Text="Muy dulce" 
+                                           FontSize="12"
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="4"
+                                           Grid.Row="1"></Label>
+
+                                </Grid>
+
+                                <!--OPCION ACIDEZ-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="acidezgu"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Aspect="AspectFill"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnABaja"
+                                           Clicked="btnABaja_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnAMedia"
+                                           Clicked="btnAMedia_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnAMediaAlta"
+                                           Clicked="btnAMediaAlta_Clicked"></ImageButton>
+                                    <Label Text="Media-alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           x:Name="btnAAlta"
+                                           Clicked="btnAAlta_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION TANINO-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="taninogu"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnTBaja"
+                                           Clicked="btnTBaja_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnTMedia"
+                                           Clicked="btnTMedia_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnTMediaAlta"
+                                           Clicked="btnTMediaAlta_Clicked"></ImageButton>
+                                    <Label Text="Media-alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           x:Name="btnTAlta"
+                                           Clicked="btnTAlta_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION SAPIDES-->
+                                <Grid ColumnDefinitions="*,*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      IsVisible="false"
+                                      x:Name="sapidesgu"
+                                      Grid.Row="2">
+
+                                    <ImageButton Source="desaborido.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnSDesaborido"
+                                           Clicked="btnSDesaborido_Clicked"></ImageButton>
+                                    <Label Text="Desaborido" 
+                                           FontSize="12"
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="bajo.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnSPoco"
+                                           Clicked="btnSPoco_Clicked"></ImageButton>
+                                    <Label Text="Poco" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnSMedio"
+                                           Clicked="btnSMedio_Clicked"></ImageButton>
+                                    <Label Text="Medio" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           x:Name="btnSSapido"
+                                           Clicked="btnSSapido_Clicked"></ImageButton>
+                                    <Label Text="Sápido" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="4"
+                                           Grid.Row="0"
+                                           x:Name="btnSSalado"
+                                           Clicked="btnSSalado_Clicked"></ImageButton>
+                                    <Label Text="Salado" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="4"
+                                           Grid.Row="1"></Label>
+
+                                </Grid>
+
+                                <!--OPCION ALCOHOL-->
+                                <Grid ColumnDefinitions="*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="alcoholgu"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnALBajo"
+                                           Clicked="btnALBajo_Clicked"></ImageButton>
+                                    <Label Text="Bajo" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnALMedio"
+                                           Clicked="btnALMedio_Clicked"></ImageButton>
+                                    <Label Text="Medio" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnALAlto"
+                                           Clicked="btnALAlto_Clicked"></ImageButton>
+                                    <Label Text="Alto" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION CUERPO -->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="cuerpogu"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnCBajo"
+                                           Clicked="btnCBajo_Clicked"></ImageButton>
+                                    <Label Text="Ligero" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnCMedio"
+                                           Clicked="btnCMedio_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnCMedioAlto"
+                                           Clicked="btnCMedioAlto_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           x:Name="btnCAlto"
+                                           Clicked="btnCAlto_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--OPCION PERMANENCIA-->
+                                <Grid ColumnDefinitions="*,*,*,*"
+                                      RowDefinitions="80,20"
+                                      Grid.Row="2"
+                                      x:Name="permanenciagu"
+                                      IsVisible="false">
+
+                                    <ImageButton Source="bajo.png"
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="0"
+                                           Grid.Row="0"
+                                           x:Name="btnPBajo"
+                                           Clicked="btnPBajo_Clicked"></ImageButton>
+                                    <Label Text="Baja" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="0"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="1"
+                                           Grid.Row="0"
+                                           x:Name="btnPMedio"
+                                           Clicked="btnPMedio_Clicked"></ImageButton>
+                                    <Label Text="Media" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="1"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="medio_alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="2"
+                                           Grid.Row="0"
+                                           x:Name="btnPMedioAlto"
+                                           Clicked="btnPMedioAlto_Clicked"></ImageButton>
+                                    <Label Text="Media-Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="2"
+                                           Grid.Row="1"></Label>
+
+                                    <ImageButton Source="alto.png" 
+                                           Aspect="AspectFill"
+                                           BackgroundColor="Transparent"
+                                           BorderColor="DarkOrange"
+                                           BorderWidth="0"
+                                           Grid.Column="3"
+                                           Grid.Row="0"
+                                           x:Name="btnPAlto"
+                                           Clicked="btnPAlto_Clicked"></ImageButton>
+                                    <Label Text="Alta" 
+                                           HorizontalTextAlignment="Center"
+                                           Grid.Column="3"
+                                           Grid.Row="1"></Label>
+                                </Grid>
+
+                                <!--PICKER PALADAR-->
+                                <Grid Grid.Row="3">
+                                    <Picker x:Name="pickerPaladar"
+                                            BackgroundColor="White"
+                                            TitleColor="Black"
+                                            Title="Calificación"
+                                            SelectedIndexChanged="pickerPaladar_SelectedIndexChanged">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>0</x:String>
+                                                <x:String>0.1</x:String>
+                                                <x:String>0.2</x:String>
+                                                <x:String>0.3</x:String>
+                                                <x:String>0.4</x:String>
+                                                <x:String>0.5</x:String>
+                                                <x:String>0.6</x:String>
+                                                <x:String>0.7</x:String>
+                                                <x:String>0.8</x:String>
+                                                <x:String>0.9</x:String>
+                                                <x:String>1</x:String>
+                                                <x:String>1.1</x:String>
+                                                <x:String>1.2</x:String>
+                                                <x:String>1.3</x:String>
+                                                <x:String>1.4</x:String>
+                                                <x:String>1.5</x:String>
+                                                <x:String>1.6</x:String>
+                                                <x:String>1.7</x:String>
+                                                <x:String>1.8</x:String>
+                                                <x:String>1.9</x:String>
+                                                <x:String>2</x:String>
+                                                <x:String>2.1</x:String>
+                                                <x:String>2.2</x:String>
+                                                <x:String>2.3</x:String>
+                                                <x:String>2.4</x:String>
+                                                <x:String>2.5</x:String>
+                                                <x:String>2.6</x:String>
+                                                <x:String>2.7</x:String>
+                                                <x:String>2.8</x:String>
+                                                <x:String>2.9</x:String>
+                                                <x:String>3</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </Grid>
+
+                            </Grid>
+                        </Frame>
+                        
+                        <!--APRECIACION PERSONAL-->
+                        <Frame Grid.Row="3"
+                               BackgroundColor="White">
+                            <Grid RowDefinitions="40,40,*,40">
+
+                                <Grid ColumnDefinitions="80,*"
+                                      HorizontalOptions="Center"
+                                      Grid.Row="0">
+                                    <Image Source="usuario2.png"
+                                           Aspect="AspectFill"
+                                           Margin="5,5,-30,-3"
+                                           Grid.Column="0"></Image>
+                                    <Label Text="Apreciacion personal"
+                                           FontSize="24"
+                                           Margin="-5,5,5,5"
+                                           TextColor="#000"
+                                           Grid.Column="1"></Label>
+                                </Grid>
+
+                                <Grid ColumnDefinitions="*,*"
+                                      Grid.Row="1">
+                                    <Button Text="Comentarios"
+                                            x:Name="btncomentarios"
+                                            Clicked="btncomentarios_Clicked"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            Grid.Column="0"></Button>
+                                    <Button Text="Maridaje"
+                                            BackgroundColor="Transparent"
+                                            x:Name="btnmeridaje"
+                                            Clicked="btnmeridaje_Clicked"
+                                            Grid.Column="1"></Button>
+                                </Grid>
+
+                                <StackLayout x:Name="comentarios" Grid.Row="2">
+                                    
+                                    <Frame Padding="0" Margin="10" CornerRadius="10">
+                                        <Entry VerticalOptions="CenterAndExpand"
+                                           x:Name="entryComentarios"
+                                           Completed="entryComentarios_Completed"
+                                               BackgroundColor="White"
+                                               TextColor="Black"></Entry>
+                                    </Frame>
+
+                                    <Button Text="Eliminar"
+                                            HorizontalOptions="End"
+                                            x:Name="btnEliminarCom"
+                                            Clicked="btnEliminarCom_Clicked"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            FontSize="10"
+                                            CornerRadius="5"
+                                            Grid.Column="0"></Button>
+                                    
+                                </StackLayout>
+
+                                <StackLayout  x:Name="meridaje" Grid.Row="2" IsVisible="false">
+                                    
+                                    <Frame Padding="0" Margin="10" CornerRadius="10">
+                                        <Entry VerticalOptions="CenterAndExpand"
+                                           x:Name="entryMeridaje"
+                                           Completed="entryMeridaje_Completed"
+                                               BackgroundColor="White"
+                                               TextColor="Black"></Entry>
+                                    </Frame>
+                                    
+                                    <Button Text="Eliminar"
+                                            HorizontalOptions="End"
+                                            x:Name="btnEliminarMer"
+                                            Clicked="btnEliminarMer_Clicked"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            FontSize="10"
+                                            CornerRadius="5"
+                                            Grid.Column="0"></Button>
+                                    
+                                </StackLayout>
+
+                                <!-- BOTONERA -->
+                              <!--
+                                <Grid ColumnDefinitions="*,*,*"
+                                      Grid.Row="3">
+                                    <Button Text="Eliminar"
+                                            x:Name="btnEliminarCom"
+                                            Clicked="btnEliminarCom_Clicked"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            FontSize="10"
+                                            CornerRadius="5"
+                                            Grid.Column="0"></Button>
+                                    
+                                    <Button Text="Editar"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            FontSize="10"
+                                            CornerRadius="5"
+                                            Grid.Column="1"></Button>
+                                    <Button Text="Agregar"
+                                            BackgroundColor="#a22c59"
+                                            TextColor="#ffff"
+                                            FontSize="10"
+                                            CornerRadius="5"
+                                            Grid.Column="2"
+                                            x:Name="btnAgregarPersonal"
+                                            Clicked="btnAgregarPersonal_Clicked"></Button>
+
+                                </Grid>
+                              -->
+                                <!--PICKER APRECIACION-->
+                                <Grid Grid.Row="3">
+                                    <Picker x:Name="pickerApreciacion"
+                                            Title="Calificación"
+                                            BackgroundColor="White"
+                                            TitleColor="Black"
+                                            SelectedIndexChanged="pickerApreciacion_SelectedIndexChanged">
+                                        <Picker.ItemsSource>
+                                            <x:Array Type="{x:Type x:String}">
+                                                <x:String>0</x:String>
+                                                <x:String>0.1</x:String>
+                                                <x:String>0.2</x:String>
+                                                <x:String>0.3</x:String>
+                                                <x:String>0.4</x:String>
+                                                <x:String>0.5</x:String>
+                                                <x:String>0.6</x:String>
+                                                <x:String>0.7</x:String>
+                                                <x:String>0.8</x:String>
+                                                <x:String>0.9</x:String>
+                                                <x:String>1</x:String>
+                                                <x:String>1.1</x:String>
+                                                <x:String>1.2</x:String>
+                                                <x:String>1.3</x:String>
+                                                <x:String>1.4</x:String>
+                                                <x:String>1.5</x:String>
+                                                <x:String>1.6</x:String>
+                                                <x:String>1.7</x:String>
+                                                <x:String>1.8</x:String>
+                                                <x:String>1.9</x:String>
+                                                <x:String>2</x:String>
+                                                <x:String>2.1</x:String>
+                                                <x:String>2.2</x:String>
+                                                <x:String>2.3</x:String>
+                                                <x:String>2.4</x:String>
+                                                <x:String>2.5</x:String>
+                                                <x:String>2.6</x:String>
+                                                <x:String>2.7</x:String>
+                                                <x:String>2.8</x:String>
+                                                <x:String>2.9</x:String>
+                                                <x:String>3</x:String>
+                                                <x:String>3.1</x:String>
+                                                <x:String>3.2</x:String>
+                                                <x:String>3.3</x:String>
+                                                <x:String>3.4</x:String>
+                                                <x:String>3.5</x:String>
+                                                <x:String>3.6</x:String>
+                                                <x:String>3.7</x:String>
+                                                <x:String>3.8</x:String>
+                                                <x:String>3.9</x:String>
+                                                <x:String>4</x:String>
+                                            </x:Array>
+                                        </Picker.ItemsSource>
+                                    </Picker>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                        
+                        <!-- BOTONOES FINAL -->
+
+                        <Grid ColumnDefinitions="*,*,*"
+                              Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <!--
+                            <Button Text="Eliminar"
+                            BackgroundColor="#a22c59"
+                            TextColor="#ffff"
+                            FontSize="10"
+                            CornerRadius="5"
+                            Grid.Column="1"></Button>
+                            -->
+                            <Button Text="Hecho"
+                            Clicked="Button_Hecho"
+                            BackgroundColor="#a22c59"
+                            TextColor="#ffff"
+                            FontSize="10"
+                            CornerRadius="5"
+                            Grid.Column="2"></Button>
+                        </Grid>
+
+                    </Grid>
+                    
+
+                </ScrollView>
+
+            </StackLayout>
+
+        </Grid>
+
+
+    </ContentPage.Content>
+</ContentPage>

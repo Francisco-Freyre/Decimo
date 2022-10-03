@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.PerfilUsuario"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*,60">
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1">
+                
+                <ScrollView>
+
+                    <StackLayout Padding="4">
+                        
+                        <!-- INFORMACIÓN USUARIO -->
+                        <Frame>
+                            <Grid ColumnDefinitions="*,*"
+                              RowDefinitions="*,20,auto,auto"
+                              BackgroundColor="#fff">
+
+                                <Image Source="usuario.png"
+                                   WidthRequest="70"
+                                   Grid.ColumnSpan="2"
+                                   Grid.Row="0"></Image>
+
+                                <Label Text="Nobre Usuario"
+                                   FontAttributes="Bold"
+                                   TextColor="#000"
+                                   HorizontalOptions="Center"
+                                   Grid.ColumnSpan="2"
+                                   Grid.Row="1"></Label>
+
+                                <Frame Grid.Column="0"
+                                       Grid.Row="2"
+                                       Padding="10">
+                                    <Grid ColumnDefinitions="auto,auto">
+                                        <Label Text="Edad:" 
+                                               FontSize="12"
+                                               Grid.Column="0"></Label>
+                                        <Label Text="25"
+                                               FontSize="12"
+                                               Grid.Column="1"></Label>
+                                    </Grid>
+                                </Frame>
+
+                                <Frame Grid.Column="1"
+                                       Padding="0"
+                                       Grid.Row="2">
+                                    <Grid ColumnDefinitions="auto,auto">
+                                        <Label Text="Correo:"
+                                               FontSize="11"
+                                               VerticalOptions="Center"
+                                               Grid.Column="0"></Label>
+                                        <Label Text="15040432@itdurango.edu.mx"
+                                               VerticalOptions="Center"
+                                               FontSize="11"
+                                               Grid.Column="1"></Label>
+                                    </Grid>
+                                </Frame>
+
+                                <Frame Grid.Column="0"
+                                       Grid.Row="3"
+                                       Padding="10">
+                                    <Grid ColumnDefinitions="auto,auto">
+                                        <Label Text="Teléfono:"
+                                               FontSize="11"
+                                               Grid.Column="0"></Label>
+                                        <Label Text="1234567894"
+                                               FontSize="12"
+                                               Grid.Column="1"></Label>
+                                    </Grid>
+                                </Frame>
+
+                                <Frame Grid.Column="1"
+                                       Grid.Row="3"
+                                       Padding="10">
+                                    <Grid ColumnDefinitions="auto,auto">
+                                        <Label Text="CP:"
+                                               Grid.Column="0"></Label>
+                                        <Label Text="95487"
+                                               Grid.Column="1"></Label>
+                                    </Grid>
+                                </Frame>
+
+                            </Grid>
+                        </Frame>
+
+                        <!-- PUBLICACIONES -->
+                        <Frame>
+                            <StackLayout>
+                                <Grid ColumnDefinitions="30,*"
+                              RowDefinitions="30,auto">
+                                    <Image Source="usuario.png"
+                                   Grid.Column="0"
+                                   Grid.Row="0"></Image>
+                                    <Label Text="Durango Grill"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   TextColor="#a22c59"></Label>
+                                    <Label Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                                   Grid.Column="1"
+                                   Grid.Row="1"></Label>
+                                </Grid>
+
+                                <Image Source="momentos.jpg"
+                               HeightRequest="200"
+                               Aspect="AspectFill"
+                               Margin="20,0"></Image>
+                                <Grid ColumnDefinitions="70,80,*"
+                              HeightRequest="30"
+                              Margin="15,0">
+                                    <Button Text="Me gusta"
+                                    Grid.Column="0"
+                                    BackgroundColor="#a22c59"
+                                    TextColor="#ffff"
+                                    CornerRadius="5"
+                                    FontSize="9"></Button>
+                                    <Button Text="Comentar"
+                                    Grid.Column="1"
+                                    BackgroundColor="#a22c59"
+                                    TextColor="#ffff"
+                                    CornerRadius="5"
+                                    FontSize="9"></Button>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame>
+                            <StackLayout>
+                                <Grid ColumnDefinitions="30,*"
+                                      RowDefinitions="*,20">
+                                    <Image Source="usuario.png"
+                                           Grid.Column="0"
+                                           Grid.Row="0"></Image>
+                                    <Label Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                                           BackgroundColor="AliceBlue"
+                                           Padding="10"
+                                           Grid.Column="1"
+                                           Grid.Row="0"></Label>
+                                    <Grid ColumnDefinitions="80,90"
+                                          Grid.Column="1"
+                                          Grid.Row="1"
+                                          HorizontalOptions="End">
+                                        <Label Text="Me gusta"
+                                               Grid.Column="0"></Label>
+                                        <Label Text="Responder"
+                                               Grid.Column="1"></Label>
+                                    </Grid>
+                                </Grid>
+
+                                <Grid ColumnDefinitions="30,*"
+                                      Margin="15,0">
+                                    <Image Source="usuario.png"
+                                           Grid.Column="0"></Image>
+                                    <Frame Padding="0" Margin="0" Grid.Column="1" CornerRadius="50">
+                                        <Entry Placeholder="Comentar publicación" HorizontalOptions="Center"></Entry>
+                                    </Frame>
+                                </Grid>
+                            </StackLayout>
+                        </Frame>
+                        
+                        
+                    </StackLayout>
+                    
+                </ScrollView>
+
+            </StackLayout>
+
+            <custom:footer Grid.Row="2"></custom:footer>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

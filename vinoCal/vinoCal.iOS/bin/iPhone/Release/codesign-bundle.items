@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_CodesignBundle Include="vinoCal.iOS.app">
+      <CodesignSigningKey>E386E357ECA0B3BA427397F66A6F7C2CC6AE2D92</CodesignSigningKey>
+      <CodesignEntitlements>/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS/obj/iPhone/Release/Entitlements.xcent</CodesignEntitlements>
+      <CodesignUseSecureTimestamp></CodesignUseSecureTimestamp>
+      <CodesignAllocate>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate</CodesignAllocate>
+      <RequireCodeSigning>true</RequireCodeSigning>
+      <CodesignExtraArgs></CodesignExtraArgs>
+      <CodesignResourceRules></CodesignResourceRules>
+      <CodesignDisableTimestamp>false</CodesignDisableTimestamp>
+      <CodesignKeychain></CodesignKeychain>
+      <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
+      <SourceProjectPath>/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS</SourceProjectPath>
+    </_CodesignBundle>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="vinoCal.views.customViews.footer">
+  <ContentView.Content>
+        <Grid ColumnDefinitions="*,*,*"
+              VerticalOptions="End"
+              BackgroundColor="#a22c59"
+              Padding="15,5">
+            <ImageButton Source="inicio.png"
+                         Grid.Column="0"
+                         Aspect="AspectFill"
+                         BackgroundColor="Transparent"
+                         Clicked="ImageButton_Index">
+            </ImageButton>
+            <ImageButton Source="catas.png"
+                         Grid.Column="1"
+                         Aspect="AspectFill"
+                         BackgroundColor="Transparent"
+                         Clicked="ImageButton_ListaVinos">
+            </ImageButton>
+            <ImageButton Source="usuarios.png"
+                         Grid.Column="2"
+                         Aspect="AspectFill"
+                         BackgroundColor="Transparent"
+                         Clicked="ImageButton_Perfil"
+                         >
+            </ImageButton>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

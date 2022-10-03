@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="vinoCal.views.customViews.toolbar">
+  <ContentView.Content>
+        <Grid ColumnDefinitions="115,*,60,40"
+              BackgroundColor="#a22c59"
+              Padding="15,5">
+            <Image Source="wine2.png" 
+                   Grid.Column="0"
+                   Aspect="AspectFill"
+                   BackgroundColor="Transparent"></Image>
+
+            <ImageButton Source="notificaciones.png"
+                         Grid.Column="2"
+                         x:Name="btnNotificaciones"
+                         Clicked="btnNotificaciones_Clicked"
+                         Aspect="AspectFill"
+                         BackgroundColor="Transparent"
+                         Margin="2,2,-35,2">
+            </ImageButton>
+
+            <ImageButton Source="usuario.png"
+                         Grid.Column="3"
+                         Clicked="ImageButton_CerrarSesion"
+                         HorizontalOptions="End"
+                         BackgroundColor="Transparent">
+            </ImageButton>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.IndexPage"
+             BackgroundColor="AliceBlue">
+    <ContentPage.Content>
+        
+        <Grid RowDefinitions="60,*">
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+            
+            <ScrollView Grid.Row="1">
+                <StackLayout>
+                    <Grid ColumnDefinitions="40,*"
+                          Padding="10"
+                          Margin="5,10"
+                          BackgroundColor="#fff">
+                        <Image Source="usuario.png"
+                               Grid.Column="0"></Image>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="Buen día Francisco Frayre" 
+                                   FontSize="20" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#hhh"></Label>
+                            <Frame  Margin="0"
+                                    Padding="0" 
+                                    CornerRadius="50">
+                                <Entry Placeholder="¿Qué estás bebiendo o comiendo?" FontSize="15" HorizontalOptions="Center"></Entry>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+
+                    <StackLayout Margin="5,10"
+                         Padding="10"
+                         BackgroundColor="#fff">
+                        <Grid ColumnDefinitions="40,*" ColumnSpacing="0" RowSpacing="0">
+                            
+                            <ImageButton Source="usuario.png"
+                                         x:Name="btnUsuario"
+                                         Clicked="btnUsuario_Clicked"
+                                         BackgroundColor="Transparent"
+                                         Grid.Column="0"></ImageButton>
+                            
+                            <StackLayout Grid.Column="1"
+                                 Margin="5">
+                                <Label Text="Francisco Frayre" TextColor="#a22c59"></Label>
+                                <Label Text="Ha ha gregado una Nueva Cata"></Label>
+                                <Label Text="Vino espumoso con sabor a mango con aroma de flores "></Label>
+                            </StackLayout>
+                            
+                        </Grid>
+                        <Image Source="botellas.png"></Image>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,10"
+                         Padding="10"
+                         BackgroundColor="#fff">
+                        <Grid ColumnDefinitions="40,*"
+                      ColumnSpacing="0"
+                      RowSpacing="0">
+                            <Image Source="usuario.png"
+                           Grid.Column="0"></Image>
+                            <StackLayout Grid.Column="1"
+                                 Margin="5">
+                                <Label Text="Francisco Frayre"
+                           TextColor="#a22c59"></Label>
+                                <Label Text="There are many variations of passages of Lorem Ipsum available, but the majority have 
+                           suffered alteration in some form, by injected humour"></Label>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+                    <StackLayout Margin="5,10"
+                         Padding="10"
+                         BackgroundColor="#fff">
+                        <Image Source="botellas.png"></Image>
+                        <Grid ColumnDefinitions="40,*">
+                            <Image Source="usuario.png"
+                           Grid.Column="0"></Image>
+                            <StackLayout Grid.Column="1">
+                                <Label Text="Durango Grill compartio su menú" 
+                           TextColor="#a22c59"></Label>
+                                <Label Text="It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."></Label>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

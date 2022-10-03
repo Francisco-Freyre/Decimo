@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.CatarVinoEtiqueta"
+             BackgroundColor="White">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*" BackgroundColor="White">
+
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1"
+                         Margin="10,5"
+                         BackgroundColor="White">
+
+                <Label Text="Catar vinos"
+                       FontSize="Title"
+                       HorizontalTextAlignment="Center"
+                       HorizontalOptions="Center"
+                       TextColor="Black"/>
+
+                <Frame Margin="10"
+                       BackgroundColor="White">
+
+                    <Grid RowDefinitions="30,50,*,30"
+                          HorizontalOptions="Center">
+
+                        <Label Text="INFORMACIÓN DE ETIQUETA"
+                               TextColor="#a22c59"
+                               Grid.Row="0"></Label>
+                        
+                        <Frame CornerRadius="5"
+                               Margin="0"
+                               Padding="0"
+                               Grid.Row="1">
+                            <Entry Placeholder="Cosecha" x:Name="txtCosecha" Keyboard="Numeric" MaxLength="4"
+                                   BackgroundColor="White"
+                                   TextColor="Black"></Entry>
+                        </Frame>
+                        
+                        <Frame CornerRadius="5"
+                               Margin="0"
+                               Padding="0"
+                               Grid.Row="2">
+                            <Entry Placeholder="% de alcohol" x:Name="txtPoralcohol" Keyboard="Numeric"
+                                   BackgroundColor="White"
+                                   TextColor="Black"></Entry>
+                        </Frame>
+                        
+                        <Grid ColumnDefinitions="*,*"
+                              Grid.Row="3">
+                            
+                            <Button Text="Eliminar"
+                                    FontSize="10"
+                                    TextColor="#ffff"
+                                    BackgroundColor="#a22c59"
+                                    CornerRadius="5"
+                                    Grid.Column="0"></Button>
+                            
+                            <Button Text="Agregar"
+                                    FontSize="10"
+                                    TextColor="#ffff"
+                                    BackgroundColor="#a22c59"
+                                    CornerRadius="5"
+                                    Clicked="Button_Agregar"
+                                    Grid.Column="1"></Button>
+                            
+                        </Grid>
+                        
+                    </Grid>
+                   
+                </Frame>
+
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

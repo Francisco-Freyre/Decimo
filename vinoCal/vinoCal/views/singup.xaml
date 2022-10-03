@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="vinoCal.views.singup"
+             Title="Registro"
+             BackgroundColor="White">
+    <StackLayout Padding="20,60">
+        <Image Source="wine.png"
+               WidthRequest="200"></Image>
+        <Entry Placeholder="Nombre" x:Name="txtUsuario" PlaceholderColor="LightGray"
+               TextColor="Black"
+               Margin="20,20" BackgroundColor="White"></Entry>
+        <Entry Placeholder="Correo" x:Name="txtCorreo" PlaceholderColor="LightGray"
+               Margin="20,20" TextColor="Black"
+               BackgroundColor="White"></Entry>
+        <Entry Placeholder="Contraseña" x:Name="txtPwd"
+               PlaceholderColor="LightGray"
+               IsPassword="True" TextColor="Black"
+               Margin="20,20"
+               BackgroundColor="White"></Entry>
+        <Button Text="Registrar"
+                Clicked="Button_Clicked"
+                Margin="20,20"
+                Background="#a22c59"
+                TextColor="#ffff"
+                CornerRadius="40"></Button>
+    </StackLayout>
+</ContentPage>

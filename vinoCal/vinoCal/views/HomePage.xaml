@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="vinoCal.views.HomePage"
+             BackgroundImageSource="fondo_index.png">
+    <StackLayout>
+        <StackLayout>
+            <Image Source="wine.png" 
+                   WidthRequest="230"
+                   Margin="2,2,2,-35"></Image>
+            <Label Text="EL ESPACIO PARA EL BUEN VINO" TextColor="#a22c59"
+                   HorizontalOptions="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="14"></Label>
+        </StackLayout>
+        <StackLayout Padding="80,180">
+            <Button Text="Ingresar" Clicked="Button_Login" 
+                Background="#1f140f" 
+                TextColor="#ffff"
+                CornerRadius="40"
+                    Margin="10"></Button>
+            <Button Text="Registrarse" Clicked="Button_Registro"
+                Background="#1f140f" 
+                TextColor="#ffff"
+                CornerRadius="40"
+                Margin="10"></Button>
+            <Label Text="Olvide mi contraseña"
+                   TextColor="#ffff"
+                   HorizontalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.AgregarVino">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*,60">
+
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1"
+                         Margin="10,5">
+
+                <Image Source="catarVino.png"
+                  Margin="10,0"
+                   Aspect="AspectFill"
+                  WidthRequest="310">
+                </Image>
+
+                <Frame>
+                    <StackLayout>
+
+                        <Grid ColumnDefinitions="80,95,*">
+                            <Label Text="Cargar imagen"
+                                   TextColor="#000"
+                                   FontSize="12"
+                                   Grid.Column="0"></Label>
+
+                            <Button Text="Seleccionar archivo"
+                                    x:Name="btnSubirImg"
+                                    Clicked="btnSubirImg_Clicked"
+                                    Margin="0"
+                                    Padding="0"
+                                    FontSize="9"
+                                    CornerRadius="5"
+                                    HeightRequest="39"
+                                    Grid.Column="1"></Button>
+
+                            <Label Text="INFORMACIÓN DE LA ETIQUETA"
+                                   TextColor="#a22c59"
+                                   Grid.Column="2"></Label>
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,*"
+                              RowDefinitions="*,*,*">
+
+                            <Frame  Grid.Column="0"
+                                    Grid.Row="0"
+                                    Margin="2"
+                                    Padding="0"
+                                    CornerRadius="5">
+                                <Entry Placeholder="Nombre del vino"></Entry>
+                            </Frame>
+
+                            <Frame Grid.Column="1"
+                                   Grid.Row="0"
+                                   Margin="2"
+                                   Padding="0"
+                                   CornerRadius="5">
+                                <Entry Placeholder="Producto"></Entry>
+                            </Frame>
+
+                            <Frame Grid.Column="0"
+                                   Grid.Row="1"
+                                   Margin="2"
+                                   Padding="0"
+                                   CornerRadius="5">
+                                <Entry Placeholder="Pais"></Entry>
+                            </Frame>
+
+                            <Frame Grid.Column="1"
+                                   Grid.Row="1"
+                                   Margin="2"
+                                   Padding="0"
+                                   CornerRadius="5">
+                                <Entry Placeholder="Cosecha"></Entry>
+                            </Frame>
+
+                            <Frame Grid.Column="0"
+                                   Grid.Row="2"
+                                   Margin="2"
+                                   Padding="0"
+                                   CornerRadius="5">
+                                <Entry Placeholder="Región"></Entry>
+                            </Frame>
+
+                            <Frame Grid.Column="1"
+                                   Grid.Row="2"
+                                   Margin="2"
+                                   Padding="0"
+                                   CornerRadius="5">
+                                <Entry Placeholder="% de alcohol"></Entry>
+                            </Frame>
+
+                        </Grid>
+
+                    </StackLayout>
+                </Frame>
+
+                <Grid ColumnDefinitions="*,*,*"
+                      HorizontalOptions="End">
+
+                    <Button Text="Eliminar"
+                            BackgroundColor="#a22c59"
+                            TextColor="#FFF"
+                            CornerRadius="15"
+                            Grid.Column="1"></Button>
+                    <Button Text="Agregar"
+                            BackgroundColor="#a22c59"
+                            TextColor="#FFF"
+                            CornerRadius="15"
+                            Grid.Column="2"></Button>
+
+                </Grid>
+
+            </StackLayout>
+
+            <custom:footer Grid.Row="2"></custom:footer>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

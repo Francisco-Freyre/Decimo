@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.vinosCal"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid RowDefinitions="60,*" BackgroundColor="White">
+
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+            
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1">
+
+                <Grid ColumnDefinitions="*,100,80"
+                  Padding="5">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <!--<Button Text="Ordenar por"
+                        Grid.Column="1"
+                        BackgroundColor="White"
+                        FontSize="9"
+                        CornerRadius="10"></Button>-->
+
+
+                    <Button Text="Nueva cata"
+                        BackgroundColor="#a22c59"
+                        TextColor="#Ffff"
+                        Grid.Column="2"
+                        Clicked="Button_CatarVino"
+                        FontSize="9"
+                        CornerRadius="10"></Button>
+            </Grid>
+
+            <ScrollView x:Name="catasUsuario"
+                        IsVisible="false"
+                        BackgroundColor="White">
+                    
+                    <ListView x:Name="listaCatas" HasUnevenRows="True" ItemSelected="listaCatas_ItemSelected"
+                              BackgroundColor="White">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    
+                                    <Frame Margin="5"
+                                           Padding="5"
+                                           BackgroundColor="White">
+
+                                        <Grid ColumnDefinitions="70,*">
+
+                                            
+
+                                            <Image Source="{Binding img}"
+                                                   Grid.Column="0">
+                                            </Image>
+                                            <Label Text="{Binding id_cata}" IsVisible="false"></Label>
+                                            
+                                            <Label Text="{Binding nombre}"
+                                                   TextColor="#a22c59"
+                                                   Grid.Column="1"></Label>
+
+                                            <Grid ColumnDefinitions="80,*,90"
+                                                   RowDefinitions="*,20,*" 
+                                                   Grid.Column="1">
+
+                                                <Label Text="Calificación:"
+                                                       Grid.Column="0"
+                                                       Grid.Row="1"
+                                                       TextColor="Black"></Label>
+
+                                                <Label Text="{Binding calif}"
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"
+                                                       TextColor="Black"></Label>
+
+                                                <Label Text="Cosecha:"
+                                                       Grid.Column="0"
+                                                       Grid.Row="2"
+                                                       TextColor="Black"></Label>
+
+                                                <Label Text="{Binding cosecha}"
+                                                       Grid.Column="1"
+                                                       Grid.Row="2"
+                                                       TextColor="Black"></Label>
+    
+                                                <!--
+                                                <Button Text="Ver calificación"
+                                                        x:Name="btncalificacion"
+                                                        BackgroundColor="#a22c59"
+                                                        CornerRadius="10"
+                                                        TextColor="#ffff"
+                                                        FontSize="9"
+                                                        HeightRequest="30"
+                                                        Grid.Column="2"
+                                                        Grid.Row="2"></Button>
+                                                -->
+
+                                            </Grid>
+
+
+                                        </Grid>
+
+                                    </Frame>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                </ScrollView>
+                
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

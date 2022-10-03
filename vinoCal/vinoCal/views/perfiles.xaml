@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:vinoCal.views.customViews"
+             x:Class="vinoCal.views.perfiles">
+    <ContentPage.Content>
+
+        <Grid RowDefinitions="60,*">
+            <Grid.Margin>
+                <OnPlatform x:TypeArguments="Thickness" >
+                    <On Platform="iOS" Value="0,40,0,-40" />
+                    <On Platform="Android" Value="0" />
+                </OnPlatform>
+            </Grid.Margin>
+            
+            <custom:toolbar Grid.Row="0"></custom:toolbar>
+
+            <StackLayout Grid.Row="1">
+                
+                <StackLayout>
+                <Image Source="dgoGrill.jpeg"
+                       Aspect="AspectFill"
+                       WidthRequest="200"
+                       HeightRequest="150"
+                       Margin="10,0"></Image>
+                <Grid ColumnDefinitions="30,*,*,*,*"
+                      VerticalOptions="Center"
+                      Padding="15,10">
+                    <Image Source="usuario.png"
+                           Grid.Column="0"></Image>
+                    <Label Text="Durango Grill"
+                           FontSize="11"
+                           Grid.Column="1"
+                           TextColor="#a22c59"></Label>
+                    <Label Text="Calificaciones"
+                           FontSize="11"
+                           Grid.Column="2"></Label>
+                    <Button Text="Ver Carta"
+                            Grid.Column="3"
+                            BackgroundColor="#a22c59"
+                            TextColor="#ffff"
+                            FontSize="8"
+                            CornerRadius="5"></Button>
+                    <Button Text="Llamar"
+                            BackgroundColor="#a22c59"
+                            TextColor="#ffff"
+                            Grid.Column="4"
+                            FontSize="9"
+                            CornerRadius="5"></Button>
+                </Grid>
+            </StackLayout>
+
+                <ScrollView>
+                    
+                    <StackLayout>
+                            <Grid ColumnDefinitions="30,*"
+                              RowDefinitions="30,auto">
+                                <Image Source="usuario.png"
+                                   Grid.Column="0"
+                                   Grid.Row="0"></Image>
+                                <Label Text="Durango Grill"
+                                   Grid.Column="1"
+                                   Grid.Row="0"
+                                   TextColor="#a22c59"></Label>
+                                <Label Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                                   Grid.Column="1"
+                                   Grid.Row="1"></Label>
+                            </Grid>
+                            <Image Source="momentos.jpg"
+                               HeightRequest="200"
+                               Aspect="AspectFill"
+                               Margin="20,0"></Image>
+                            <Grid ColumnDefinitions="70,80,*"
+                              HeightRequest="30"
+                              Margin="15,0">
+                                <Button Text="Me gusta"
+                                    Grid.Column="0"
+                                    BackgroundColor="#a22c59"
+                                    TextColor="#ffff"
+                                    CornerRadius="5"
+                                    FontSize="9"></Button>
+                                <Button Text="Comentar"
+                                    Grid.Column="1"
+                                    BackgroundColor="#a22c59"
+                                    TextColor="#ffff"
+                                    CornerRadius="5"
+                                    FontSize="9"></Button>
+                            </Grid>
+                            <Grid ColumnDefinitions="30,*"
+                              RowDefinitions="*,20"
+                              Margin="15,0">
+                                <Image Source="usuario.png"
+                                   Grid.Column="0"
+                                   Grid.Row="0"></Image>
+                                <Label Text="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+                                   BackgroundColor="AliceBlue"
+                                   Padding="10"
+                                   Grid.Column="1"
+                                   Grid.Row="0"></Label>
+                                <Grid ColumnDefinitions="80,90"
+                                  Grid.Column="1"
+                                  Grid.Row="1"
+                                  HorizontalOptions="End">
+                                    <Label Text="Me gusta"
+                                       Grid.Column="0"></Label>
+                                    <Label Text="Responder"
+                                       Grid.Column="1"></Label>
+                                </Grid>
+                            </Grid>
+                            <Grid ColumnDefinitions="30,*"
+                              Margin="15,0">
+                                <Image Source="usuario.png"
+                                   Grid.Column="0"></Image>
+                                <Frame Padding="0" Margin="0" Grid.Column="1" CornerRadius="50">
+                                    <Entry Placeholder="Comentar publicación"
+                                   HorizontalOptions="Center"></Entry>
+                                </Frame>
+                            </Grid>
+                        </StackLayout>
+                </ScrollView>
+                
+            </StackLayout>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

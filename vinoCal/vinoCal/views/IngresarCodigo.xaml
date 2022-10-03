@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="vinoCal.views.IngresarCodigo"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" Margin="20, 35">
+            <Label Text="CODIGO DE VERIFICACION" FontSize="Title"
+                   TextColor="Black" HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Codigo" PlaceholderColor="Black"
+                   BackgroundColor="White" TextColor="Black"
+                   WidthRequest="200" Margin="20"
+                   x:Name="txtCodigo"/>
+            <Button Text="Verificar" TextColor="White"
+                    BackgroundColor="Black" x:Name="btnVerificar"
+                    Clicked="btnVerificar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

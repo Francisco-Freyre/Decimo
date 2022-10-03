@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="vinoCal.iOS.app/vinoCal.iOS">
+      <BCSymbolMapName>vinoCal.iOS.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>false</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>false</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>vinoCal.iOS.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>obj/iPhone/Release/mtouch-symbols.list</SymbolFile>
+      <DSymName>vinoCal.iOS.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/franciscofreyre/Documents/GitHub/vinoCal/vinoCal/vinoCal.iOS</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>
